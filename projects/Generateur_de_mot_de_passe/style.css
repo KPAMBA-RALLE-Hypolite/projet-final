@@ -73,3 +73,51 @@ body{
     background-color: transparent;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Changez la largeur à 90% pour les tablettes */
+        padding: 5px; /* Réduisez le rembourrage */
+    }
+
+    .box_message input {
+        width: calc(100% - 20px); /* Ajustez la largeur pour les écrans plus petits */
+    }
+
+    .container h2 {
+        font-size: 1.5rem; /* Réduisez la taille de la police pour les petits écrans */
+    }
+
+    .btn input {
+        width: 70%; /* Ajustez la largeur des boutons */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Ajoutez du rembourrage pour éviter que le contenu touche le bord */
+    }
+
+    .container {
+        width: 100%; /* Largeur à 100% pour les mobiles */
+    }
+
+    .box_message input {
+        width: calc(100% - 20px); /* Ajustez la largeur des champs d'entrée */
+        height: 60px; /* Modifiez la hauteur pour s'adapter aux petits écrans */
+        font-size: 1rem; /* Réduisez la taille de la police */
+    }
+
+    .btn input {
+        width: 65%; /* Ajustez la largeur des boutons sur les petits écrans */
+    }
+
+    .btn button {
+        width: 50px; /* Réduisez la largeur du bouton */
+    }
+
+    .container h2 {
+        font-size: 1.2rem; /* Réduisez encore la taille de la police pour les petits écrans */
+    }
+}
+

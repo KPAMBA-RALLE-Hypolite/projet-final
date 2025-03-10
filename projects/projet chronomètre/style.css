@@ -50,3 +50,32 @@ body{
 .btn button:hover{
     transform: scale(0.95);
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cantenair {
+        width: 70%; /* Augmente la largeur pour les écrans moyens */
+    }
+
+    .ecran span {
+        font-size: 1.5rem; /* Réduit la taille de la police pour les écrans moyens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cantenair {
+        width: 90%; /* Augmente la largeur pour les petits écrans */
+    }
+
+    .ecran span {
+        font-size: 1.2rem; /* Réduit encore la taille de la police pour les petits écrans */
+    }
+
+    .btn button {
+        width: 48%; /* Ajuste la largeur des boutons pour les petits écrans */
+        margin-bottom: 5px; /* Ajoute un espace entre les boutons */
+    }
+
+    .btn {
+        flex-direction: column; /* Aligne les boutons verticalement sur les petits écrans */
+    }
+}

@@ -75,3 +75,41 @@ body{
 .error {
     color: red;
 }
+
+/* Media Queries pour rendre le design responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+    }
+
+    .input input {
+        width: 70%; /* Permet à l'input de prendre 70% de la largeur du conteneur */
+    }
+
+    .input button {
+        width: auto; /* Permet au bouton de s'ajuster à son contenu */
+    }
+
+    .message, .code_barres {
+        width: 90%; /* Rendre les éléments larges de 90% sur petits écrans */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%; /* Prend 95% de la largeur de l'écran pour les très petits écrans */
+    }
+
+    .container h1 {
+        font-size: 1.4rem; /* Réduit la taille du titre */
+    }
+    
+    .input input {
+        width: 100%; /* L'input prend 100% de l'espace sur les très petits écrans */
+    }
+
+    .input button {
+        width: 100%; /* Le bouton prend aussi 100% */
+        margin-top: 5px; /* Ajout d'un espacement pour un meilleur look sur mobile */
+    }
+}

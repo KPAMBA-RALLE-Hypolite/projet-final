@@ -86,3 +86,43 @@ form button:active{
     position: relative;
     left: -5px;
 }
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cantenaire_form,
+    #cantenaire_verification {
+        width: 90%; /* Ajuste la largeur à 90% pour les tablettes */
+    }
+    
+    form input,
+    form button {
+        width: calc(100% - 20px); /* Ajuste la largeur des éléments pour qu'ils se remplissent bien */
+        margin-left: 0; /* Enlève le marge à gauche des boutons */
+    }
+    
+    form button {
+        margin-left: 0; /* Enlève le marge à gauche des boutons */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Ajoute du padding pour éviter que le contenu touche les bords */
+    }
+    
+    form input,
+    form button {
+        padding: 10px; /* Ajuste le padding pour plus de comfort sur les petits écrans */
+    }
+
+    .cantenaire_form,
+    #cantenaire_verification {
+        width: 100%; /* Largeur à 100% pour les mobiles */
+        padding: 10px; /* Ajuste le padding général */
+    }
+
+    form {
+        font-weight: normal; /* Ajuste la taille de la police si nécessaire */
+    }
+}
