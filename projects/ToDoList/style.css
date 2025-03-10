@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #4285f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    
+}
+.cantenair{
+    background-color: #fff;
+    width: 50%;
+    padding: 5px  0;
+    border-radius:5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #1817177a;
+}
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-family: "Grechen Fuemen", serif;
+}
+.tache{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+}
+input{
+    width: 90%;
+    height: 29px;
+    border-radius: 5px 0 0 5px;
+    outline: 0;
+    border: solid 1px #b3b2b2;
+    padding-left: 5px;
+
+}
+button{
+    width: 10%;
+    height: 29px;
+    border-radius: 0 5px 5px 0;
+    outline: 0;
+    border: 0;
+    background-color: #4285f4;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+/*donner un style à la classe créée depuis le js*/
+.paragraph_style{
+    width: 96%;
+    border-radius: 5px ;
+    outline: 0;
+    border: solid 1px #b3b2b2;
+    padding: 5px;
+    margin: 5px;
+    color: #fff;
+    background-color:  #4285f4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.18rem;
+    word-break: break-all;
+    cursor: pointer;
+    animation: animation 0.5s linear;
+}
+.paragraph_style:last-child{
+    margin-bottom: 0;
+}
+@keyframes animation {
+    from{
+        transform: translateY(50px);
+    }    
+}
+
+/*style pour la gestion dans la liste des taches( effet au click ou double click)*/
+.tache_style{
+    text-decoration: line-through;
+    background-color: rgb(247, 118, 118);
+
+}

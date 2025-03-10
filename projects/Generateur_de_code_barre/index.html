@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Code-barres</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.0/JsBarcode.all.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Code-barres</h1>
+        <div class="input">
+            <input type="text" placeholder="Entrez le texte..." class="texte">
+            <button class="generer">Générer</button>
+        </div>
+        <canvas class="code_barres" style="display:none;"></canvas>
+        <button class="telecharger" style="display:none;">Télécharger le Code-barres</button>
+        <div class="message"></div>
+    </div>
+</body>
+</html>

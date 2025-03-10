@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verifacteur de mot de passe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="cantenaire_form">
+        <form >
+            <label >utilisateur</label><br>
+            <input type="text" id="utilisateur" class="user" required>
+            <br><label >mot de passe</label> <br>
+            <input type="password" id="password" class="psw">
+            <button>envoyer</button>
+        </form>
+    </div>
+    <div id="cantenaire_verification" >
+        <h3>le mot de passe doit contenir les elements suivants:</h3>
+        <p class="invalid" id="majuscule">une lettre majuscule</p>
+        <p class="invalid" id="lettre">une lettre minuscule</p>
+        <p class="invalid" id="chiffre">un chiffre</p>
+        <p class="invalid" id="minimum">8 charactère minimum</p>
+    </div>    
+</body>
+</html>

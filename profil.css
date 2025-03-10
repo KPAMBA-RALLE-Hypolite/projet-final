@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite IT Moderna", cursive;
+    list-style-type: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Changez en colonne pour empiler les éléments */
+    height: 100vh; /* Assurez-vous d'utiliser 100vh pour que le corps s'ajuste */
+}
+
+.profil {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
+    max-height: 100%; /* Ajustez la hauteur maximale ici */
+}
+
+.picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #007bff8f;
+    max-width: 100%; /* Assure que ça ne dépasse pas */
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+.picture img {
+    width: 350px;
+    height: 335px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.picture img:hover {
+    transform: scale(1.1);
+}
+
+.informations_personnelles {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #007bff8f;
+    flex: 2;
+    padding-left: 30px;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    border-radius:0 8px  8px 0;
+    max-height: 100%; /* Ajustez la hauteur maximale ici */
+}
+
+.informations_personnelles h4 {
+    font-size: 30px;
+    color: #333;
+    margin: 0 auto;
+    padding-top: 55px ;
+
+}
+
+.informations_personnelles p {
+    font-size: 20px;
+    color: #555;
+    margin: 25px 0;
+    border: solid 1px #4f85be23;
+    padding: 5px 10px;
+    width: 99%;
+}
+
+.informations_personnelles span {
+    font-weight: bold;
+    color: #007bff8c;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    transform: scale(1.7);
+}
+
+.icones a {
+    padding: 50px 10px;
+    font-size: 20px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icones a:hover {
+    transform: scale(1.8);
+}
+
+
+.main-container {
+    position: relative; /* Assurez-vous que le conteneur principal est positionné correctement */
+    padding: 55px 20px; /* Ajustez selon le besoin */
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Largeur du conteneur */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    margin:  0; /* Marge autour de la citation */
+}
+
+.marquee {
+    color: #007bff;
+    font-weight: 800;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 60px;
+    animation: marquee 15s linear infinite; /* Ajustez le temps de défilement */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(120%); }
+    100% { transform: translateX(-150%); }
+}
+
+
+
+@media (max-width: 768px) {
+    .profil {
+        display:block;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: 100vh;
+        border: none;
+        background-color: #fff;
+    }
+
+    .picture {
+        margin: 20px 0;
+        padding: 10px;
+        border: none;
+        box-shadow: none;
+    }
+    .picture img{
+        width: 250px;
+        height: 200px;
+    }
+
+    .informations_personnelles{
+        height: 50%;
+        display: block;
+ 
+        box-shadow: none;
+        border: none;
+        margin: auto;
+    }
+}

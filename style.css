@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Todhri&display=swap');
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif Todhri", sans-serif;
+}
+
+body {
+    font-family: "Noto Serif Todhri", serif;
+    line-height: 1.6;
+    
+}
+/*configuration du container principal*/
+.page{
+    flex: 1;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.content{
+    width: 92%;
+}
+#main-iframe {
+    position: relative;
+    border-radius: 6px;
+    width: 100%;
+    height: 80%;
+    border: solid 1px #007bff7e;
+    background-color: transparent;
+}
+
+/* Classe pour ajuster l'image en fonction du ratio */
+.ratio-adjusted {
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* configuration des asides*/
+
+/* Style pour la barre latérale */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding:20px;
+    box-shadow: 0 0 10px rgba(70, 68, 68, 0.781);
+    border:solid 2px #007bff8c;
+}
+.logo img {
+    width: 100%; /* Le logo occupera 100% de la largeur de son conteneur */
+    max-width: 200px; /* Taille maximale pour les grands écrans */
+    height: auto; /* Hauteur ajustée automatiquement pour maintenir le ratio */
+    border-radius: 7px;
+    background-color: transparent;
+}
+
+
+/* Style pour le menu de navigation */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #007bff3f;; /* Ligne de séparation entre les projets */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li:last-child {
+    border-bottom: none; /* Supprimer la bordure du dernier élément */
+}
+
+/* Style pour les liens */
+.sidebar nav ul li a {
+    color: #161616;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding:5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effet au survol */
+.sidebar nav ul li a:hover {
+    background-color: #44444457; /* Changement de fond au survol */
+
+}
+/* Ajouter une icône de dossier avant chaque lien */
+.sidebar nav ul li a::before {
+    font-family: "Font Awesome 6 Free"; /* Utiliser FontAwesome */
+    content: "\f07b"; /* Code de l'icône de dossier */
+    margin-right: 10px;
+    color: #161616;
+    transition: margin-right 0.3s ease;
+}
+
+/* Animation de l'icône au survol */
+.sidebar nav ul li a:hover::before {
+    margin-right: 15px;
+}
+/* configuration des asides*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border:solid 2px#007bff8c;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    width: 100%;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+nav .image{
+    width: 55px;
+    height: 60px;
+    margin-left: 10px;
+}
+nav .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 5px 0;
+    border-radius: 50%;   
+}
+
+
+/* Style pour le titre */
+.animated-title {
+    font-size: 2rem; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    background: linear-gradient(90deg, #0f0ce7ee, #ecb21056, #eb0808bd); /* Dégradé de trois couleurs */
+    -webkit-background-clip: text; /* Appliquer le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Rendre le texte transparent pour voir le dégradé */
+}
+.animated-title span{
+    font-size: 1.5rem;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color:#fff;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    border-radius: 6px;
+    border:solid 2px#007bff67;
+    overflow: hidden;
+}
+footer p{
+    font-weight: 800;
+    color: #0f0f0f;
+    font-size: 1rem;
+    animation: slideOutRight 3s linear;
+
+}
+footer span{
+    color: #007bff8c;
+}
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(100%); /* Position initiale */
+    }
+    50% {
+        transform: translateX(50%); /* Déplace le titre hors de l'écran vers la droite */
+    }
+    100% {
+        transform: translateX(0); /* Déplace le titre hors de l'écran vers la droite */
+    }
+}
+
+
+/* Style pour l'iframe */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Styles pour les écrans de tablette (768px à 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 120%;
+        height: 50%;
+    }
+
+    nav .image {
+        width: 45px;
+        height: 50px;
+    }
+}
+
+/* Styles pour les écrans de smartphone (moins de 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empiler les éléments verticalement */
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .header nav {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    nav .image {
+        width: 40px;
+        height: 45px;
+    }
+
+    /* Ajuster la taille de la police pour les petits écrans */
+    .animated-title {
+        font-size: 2rem;
+    }
+
+    .animated-title span {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* Taille fixe pour les tablettes */
+        height: auto;
+    }
+
+    nav .image {
+        width: 45px;
+        height: 50px;
+    }
+
+    .sidebar {
+        width: 100%; /* La sidebar occupe toute la largeur */
+        padding: 15px;
+    }
+
+    .content {
+        width: 100%; /* Le contenu occupe toute la largeur */
+    }
+
+    #main-iframe {
+        height: 60vh; /* Ajuster la hauteur de l'iframe */
+    }
+}
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Taille encore plus petite pour les très petits écrans */
+    }
+
+    .animated-title {
+        font-size: 1.2rem; /* Réduire encore la taille de la police */
+    }
+
+    .animated-title span {
+        font-size: 1rem;
+    }
+
+    .sidebar nav ul li a {
+        font-size: 16px; /* Réduire la taille de la police des liens */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Réduire la taille de la police du footer */
+    }
+}
+.menu-toggle {
+    display: none; /* Masquer par défaut */
+    font-size: 30px;
+    font-weight: 900;
+    background-color: transparent;
+    color: rgb(14, 13, 13);
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Afficher le bouton de menu */
+        position: absolute;
+        top: 135px;
+        right: 25px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+        left: -250px; /* Cachez le menu par défaut */
+        width: 200px;
+        overflow-y: auto;
+        height: 100vh;
+        background-color:#fffffff8;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        left: 0; /* Affichez le menu lorsqu'il est actif */
+    }
+
+    .content {
+        margin-left: 0; /* Ajustez la marge pour le contenu principal */
+    }
+}

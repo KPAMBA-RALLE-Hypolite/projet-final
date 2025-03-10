@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #5372f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Serif", serif;
+}
+.cantenair{
+    background-color: #fff;
+    width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 51, 0.452);
+}
+.utilisateur{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.btn_controles{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    overflow: hidden;    
+}
+
+.btn_controles button{
+    width: 100px;
+    border-radius: 6px;
+    padding: 3px;
+    outline: none;
+    border: solid 2px #5372f0;
+    background-color: #5372f0;
+    transition: all 0.5s ease;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+    box-shadow: 0 0  19px rgba(25, 25, 26, 0.171);
+}
+.btn_controles button:focus{
+    background-color: #fff;
+    color: #5372f0; 
+}
+.image-size{
+    width: 50px; /* Ajustez la taille des images selon votre préférence */
+    height: 50px;
+    object-fit: cover;
+    position: relative;
+    left: 2px;
+}
+.result{
+    margin: 10px auto;
+    color: rgba(255, 255, 0, 0.801);
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* ou la hauteur de votre choix */
+    text-align: center; /* Centre le texte à l'intérieur */
+}

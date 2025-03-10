@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onglets Sites</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar" id="tab">
+        <button class="tablink active" onclick="openOnglet(event, 'home')">HOME</button>
+        <button class="tablink" onclick="openOnglet(event, 'contacts')">CONTACTS</button>
+        <button class="tablink" onclick="openOnglet(event, 'reservations')">RESERVATIONS</button>
+        <button class="tablink" onclick="openOnglet(event, 'boutique')">BOUTIQUE</button>
+    </header>
+    <div class="content">
+        <div  class="tabcontent" id="home">
+            <h2>home</h2>
+            <p>Bienvenue sur la page Home de notre site</p>
+            <div class="image">
+                <img src="./images/images (2).jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="contacts">
+            <h2>contacts</h2>
+            <p>Bienvenue sur la page contacts de notre site</p>
+            <div class="image">
+                <img src="./images/download.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="reservations">
+            <h2>reservations</h2>
+            <p>Bienvenue sur la page reservations de notre site</p>
+            <div class="image">
+                <img src="./images/images (1).jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="boutique">
+            <h2>boutique</h2>
+            <p>Bienvenue sur la page boutique de notre site</p>
+            <div class="image">
+                <img src="./images/images.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

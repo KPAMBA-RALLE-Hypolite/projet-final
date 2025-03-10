@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #18f;
+}
+.cantenair{
+    box-shadow: 0 0 15px #302e2e98;
+    width: 39%;
+    height: 18vh;
+    background-color: #fff;
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.jump-counter {
+    font-size: 18px;
+    margin-top: 20px;
+    color: red;
+    font-weight: 700;
+}
+.interface{
+    position: relative;
+    border-bottom: solid 1px #999;
+    top: 9vh;
+}
+#person{
+    position: relative;
+    top: 2vh;
+}
+
+/*creation de l'effet saut de la personne grace à la keyframe*/
+@keyframes saut_animation {
+    0%{
+        top: 2vh;
+    }
+    50%{
+        top: -2vh;
+    }
+    100%{
+        top: 2vh;
+    }
+    
+}
+/*inssertion dans un style pour le js*/
+.person_saut{
+    animation: saut_animation 500ms infinite;
+}  
+
+
+#obstacle{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: relative;
+    left: 98%;
+    border-radius: 50%;
+    animation: roulage_boule 0.9s  linear infinite;
+}
+/*creation de l'effet du roulement de la boule*/
+@keyframes roulage_boule {
+    0%{
+        left: 98%;
+    }
+
+    100%{
+       left: -1%;
+    }
+    
+}
+
+.control{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+.control button, .control a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Lora", serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 15px auto;
+    width: 65px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 17, 0.486);
+    text-align: center;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.control button:active, .control a:active{
+    transform: scale(0.95);
+}
